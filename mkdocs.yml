@@ -1,0 +1,29 @@
+site_name: nhsuk-cms
+repo_url: https://dev.azure.com/nhsuk/_git/nhsuk.nhsuk-cms
+nav:
+  - Getting Started:
+    - 'Intro': 'index.md'
+    - 'Wagtail': 'getting_started/wagtail.md'
+    - 'Dockerless': 'getting_started/dockerless.md'
+  - Development:
+    - 'Scripts': 'development/scripts.md'
+    - 'Style Guidelines': 'development/style-guidelines.md'
+    - 'Frontend build': 'development/frontend-build.md'
+  - Tests:
+    - 'Intro': 'tests/index.md'
+    - 'Factories': 'tests/factories.md'
+  - Deployment:
+    - 'Pipeline': 'deployment/pipeline.md'
+    - 'Configuration': 'deployment/configuration.md'
+  - Apps:
+    - 'Core': 'apps/core.md'
+    - 'Products': 'apps/products.md'
+
+theme: readthedocs
+use_directory_urls: false
+plugins:
+  - search
+  - schema_reader:
+      include:
+        - "../nhsuk/tests/api_schema"
+        - "../products/nhsuk_behind_the_headlines/tests/api_schema"
